@@ -90,7 +90,13 @@
             <p class="message">Surprise! Here's a playlist of our favorite songs on Apple Music:</p>
             <!-- Updated to proper Apple Music embed (using your playlist ID). If it doesn't load, get the full embed code from Apple Music. -->
             <iframe src="https://embed.music.apple.com/in/playlist/pl.u-kv9l2BjsJY6jbDX" height="450" frameborder="0" allowfullscreen></iframe>
-            <p>Or a virtual hug: 🤗</p>
+            
+            <p class="message">And for a virtual hug:</p>
+            <div style="text-align: center; margin: 20px 0;">
+                <img id="teddy" src="https://images-cdn.ubuy.co.in/69416972948aab80dd09ca03-cute-plush-teddy-bear-stuffed-animal.jpg" alt="Cute Teddy Bear Hug" style="width: 100px; height: 100px; transition: transform 0.3s ease;"> <!-- Your specific teddy image -->
+                <br>
+                <button onclick="tightHug()">Give a Tight Teddy Hug! 🧸</button>
+            </div>
         </div>
     </div>
 
@@ -116,6 +122,14 @@
 
         function showSurprise() {
             document.getElementById('surprise').style.display = 'block';
+        }
+
+        function tightHug() {
+            const teddy = document.getElementById('teddy');
+            teddy.style.transform = 'scale(1.2)'; // Makes it "squeeze" bigger
+            setTimeout(() => {
+                teddy.style.transform = 'scale(1)'; // Back to normal after 0.5 seconds
+            }, 500);
         }
     </script>
 </body>
