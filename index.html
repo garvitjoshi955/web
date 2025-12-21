@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2 Months, My Love!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fecfef);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .photos {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+        .countdown {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #ff6b6b;
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background: #ff5252;
+        }
+        iframe {
+            width: 100%;
+            max-width: 400px;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy 2 Months, YASHITAAA! ❤️</h1>
+    <div class="container">
+        <p class="message">From the moment we started, every day with you has been magical. Here's to 2 months of love, laughter, and endless adventures. I love you more than words can say!</p>
+        
+        <div class="photos">
+            <!-- Add your own photos here. For now, using placeholders. Replace with actual image paths. -->
+            <img src="photo1.jpg" alt="Us together">
+            <img src="photo2.jpg" alt="A special moment">
+            <img src="photo3.jpg" alt="Our favorite place">
+        </div>
+        
+        <p class="message">Remember when we fell in love?</p>
+        
+        <div class="countdown" id="countdown">Calculating our time together...</div>
+        
+        <button onclick="showSurprise()">Click for a Surprise!</button>
+        <div id="surprise" style="display: none; margin-top: 20px;">
+            <p class="message">Surprise! Here's a playlist of our favorite songs on Apple Music:</p>
+            <!-- Updated to proper Apple Music embed (using your playlist ID). If it doesn't load, get the full embed code from Apple Music. -->
+            <iframe src="https://embed.music.apple.com/in/playlist/pl.u-kv9l2BjsJY6jbDX" height="450" frameborder="0" allowfullscreen></iframe>
+            <p>Or a virtual hug: 🤗</p>
+        </div>
+    </div>
+
+    <script>
+        // Set your relationship start date here (format: YYYY-MM-DD)
+        const startDate = new Date('2025-10-21'); // Replace with your actual start date if needed!
+
+        function updateTimer() {
+            const now = new Date();
+            const diffTime = now - startDate;
+            
+            const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diffTime % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerText = `We've been together for: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds!`;
+        }
+        
+        // Update every second
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Run immediately
+
+        function showSurprise() {
+            document.getElementById('surprise').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
